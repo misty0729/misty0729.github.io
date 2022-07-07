@@ -15,9 +15,11 @@ profile:
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 Hi! I am a third year PhD student in Computer Science and Technology at [Tsinghua University](https://www.tsinghua.edu.cn/en/), where I obtained a bachelor’s degree in Computer Science and Technology in 2019. I conduct research under the supervision of Professor [Peng Cui](http://cuip.thumedialab.com/) and Professor [Bo Li](http://www.sem.tsinghua.edu.cn/en/libo).
 
 My research interests include fair machine learning, out-of-distribution generalization, and causal inference.
+
+Email: xrz199721 [at] gmail [dot] com
