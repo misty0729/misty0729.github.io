@@ -2,7 +2,7 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+        <!-- <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -16,15 +16,19 @@
           <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
         {%- endif -%}
-        </div>
+        </div> -->
+
+        <!-- <div class="col-sm-1">
+          [{{ entry.count }}]
+        </div>       -->
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="col-sm-8">
+        <div id="{{entry.key}}" class="col-sm-11">
         {% if entry.type == "thesis" -%}
           {{reference}}
         {%- else %}
-          <!-- Title -->
-          <div class="title">{{entry.title}}</div>
+          <!-- Title
+          <div class="title">{{entry.title}}</div> -->
           <!-- Author -->
           <div class="author">
           {%- for author in entry.author_array -%}
@@ -44,38 +48,39 @@
               {%- endfor -%}
             {%- endif -%}
             
-            {%- if forloop.length == 1 -%}
-              {%- if author_is_self %}
-                <em>{{author.first}} {{author.last}}</em>
-              {%- else -%}
-                {{author.first}} {{author.last}}
-              {%- endif -%}
-            {%- else -%}
-              {%- unless forloop.last -%}
-                {% if author_is_self %}
-                  <em>{{author.first}} {{author.last}}</em>,&nbsp;
-                {%- else -%}
-                  {% if coauthor_url -%}
-                    <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>,&nbsp;
-                  {%- else -%}
-                    {{author.first}} {{author.last}},&nbsp;
-                  {%- endif -%}
-                {%- endif -%}
-              {%- else -%}
-                {% if author_is_self -%}
-                  and <em>{{author.first}} {{author.last}}</em>
-                {% else -%}
-                  {%- if coauthor_url -%}
-                    and <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
-                  {% else -%}
-                    and {{author.first}} {{author.last}}
-                  {%- endif -%}
-                {%- endif -%}
-              {%- endunless -%}
-            {%- endif -%}
+            {% if forloop.length == 1 %}
+            {% if author_is_self %}
+            <em>{{author.first}} {{author.last}}</em>
+            {% else %}
+            {{author.first}} {{author.last}}
+            {% endif %}
+            {% else %}
+            {% unless forloop.last %}
+            {% if author_is_self %}
+            <em>{{author.first}} {{author.last}}</em>,
+            {% else %}
+            {% if site.data.coauthors[author.last] %}
+            <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+            {% else %}
+            {{author.first}} {{author.last}},
+            {% endif %}
+            {% endif %}
+            {% else %}
+            {% if author_is_self %}
+            <em>{{author.first}} {{author.last}}</em>
+            {% else %}
+            {% if site.data.coauthors[author.last] %}
+            <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+            {% else %}
+            {{author.first}} {{author.last}}
+            {% endif %}
+            {% endif %}
+            {% endunless %}
+            {% endif %}
           {%- endfor %}
           </div>
 
+          <div class="title">{{entry.title}}</div>
           <!-- Journal/Book title and date -->
           {% if entry.type == "article" -%}
             {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
@@ -90,11 +95,20 @@
           {%- if entry.year -%}
             {%- capture entryyear -%}{{ " " }}{{entry.year}}{%- endcapture -%}
           {%- endif -%}
-          {%- capture periodical -%}{{ entrytype }}.{{ entrymonth }}{{ entryyear }}.{%- endcapture -%}
+          {%- capture periodical -%}{{ entrytype }}.{%- endcapture -%}
 
 
 
           <div class="periodical">
+            <abbr>
+              {% if entry.abbr %}
+                {% if site.data.venues[entry.abbr] %}
+                  <a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}} {{entry.year}},
+                {% else %}
+                  {{entry.abbr}} {{entry.year}}.
+                {% endif %}
+              {% endif %}
+            </abbr>
             {{ periodical | strip }}
             {%- if entry.arxiv %}
               <a href="http://arxiv.org/abs/{{ entry.arxiv }}">[ArXiv]</a>

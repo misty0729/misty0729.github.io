@@ -483,9 +483,13 @@ footer.sticky-bottom {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: -2rem;
     text-align: right;
+  }
+  abbr {
+    color: var(--global-venue-color);
+    font-weight: bolder;
   }
   ol.bibliography {
     list-style: none;
@@ -499,26 +503,7 @@ footer.sticky-bottom {
         min-width: 80px;
         max-width: 200px;
       }
-      .abbr {
-        height: 2rem;
-        margin-bottom: 0.5rem;
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          padding-left: 0.8rem;
-          padding-right: 0.8rem;
-          a {
-            color: white;
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
-      }
+
       .title {
         font-weight: bolder;
       }
