@@ -16,6 +16,7 @@ profile:
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
+others: true
 ---
 
 Hi! I am a third year PhD student in Computer Science and Technology at [Tsinghua University](https://www.tsinghua.edu.cn/en/), where I obtained a bachelor’s degree in Computer Science and Technology in 2019. I conduct research under the supervision of Professor [Peng Cui](http://cuip.thumedialab.com/) and Professor [Bo Li](http://www.sem.tsinghua.edu.cn/en/libo).

@@ -11,7 +11,7 @@ nav_order: 1
 <!-- _pages/publications.md -->
 <div class="publications">
 
-<h1>Conference & journal articles</h1>
+<h2>Conference & journal articles</h2>
 
 {%- for y in page.years-paper %}
   <h2 class="year">{{y}}</h2>
@@ -22,7 +22,7 @@ nav_order: 1
 
 <div class="publications">
 
-<h1>Preprints</h1>
+<h2>Preprints</h2>
 
 {% bibliography -f preprints %}
 
