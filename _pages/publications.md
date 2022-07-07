@@ -24,6 +24,7 @@ nav_order: 1
 
 <h2>Preprints</h2>
 
-{% bibliography -f preprints %}
+<h2 class="year">&nbsp;</h2>
+{% bibliography -f preprints%}
 
 </div>

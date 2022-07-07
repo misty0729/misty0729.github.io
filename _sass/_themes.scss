@@ -13,7 +13,8 @@
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0,0,0,.7);
+  --global-divider-color: rgba(0,0,0,.4);
+  --global-divider-color-shallow: rgba(0,0,0,.1);
   --global-card-bg-color: #{$white-color};
 
   .fa-sun {
@@ -37,7 +38,8 @@ html[data-theme='dark'] {
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #9999a1;
+  --global-divider-color: #e6e6e6;
+  --global-divider-color-shallow: #515151;
   --global-card-bg-color: #{$grey-900};
 
   .fa-sun {

@@ -9,7 +9,7 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
 }
 
 hr {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color-shallow);
 }
 
 table {
@@ -450,7 +450,8 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -571,6 +572,11 @@ footer.sticky-bottom {
       }
     }
   }
+}
+
+.others {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 // Rouge Color Customization
