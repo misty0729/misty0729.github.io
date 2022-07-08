@@ -18,12 +18,12 @@
         {%- endif -%}
         </div> -->
 
-        <!-- <div class="col-sm-1">
-          [{{ entry.count }}]
-        </div>       -->
+        <div class="col-sm-1">
+          <div class="count"></div>
+        </div>      
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="col-sm-11">
+        <div id="{{entry.key}}" class="col-sm-10">
         {% if entry.type == "thesis" -%}
           {{reference}}
         {%- else %}

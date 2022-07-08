@@ -464,6 +464,7 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
+  counter-increment: paper-counter;
   margin-top: 1rem;
   margin-bottom: 1rem;
   h1 {
@@ -490,6 +491,10 @@ footer.sticky-bottom {
   abbr {
     color: var(--global-venue-color);
     font-weight: bolder;
+  }
+  .count::before {
+    content: "[" counter(paper-counter) "]";
+    counter-increment: paper-counter -1;
   }
   ol.bibliography {
     list-style: none;

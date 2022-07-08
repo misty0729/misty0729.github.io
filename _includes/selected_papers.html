@@ -1,7 +1,9 @@
 
           <hr></hr>
+          <div style="counter-reset: paper-counter {% bibliography_count -f papers -q @*[selected=true]* %}">
           <div class="publications">
             <h2>Selected publications</h2>
             <p>The full list of publications can be found in the <a href="/publications">publications page</a>.</p>
             {% bibliography -f papers -q @*[selected=true]* %}
+          </div>
           </div>
