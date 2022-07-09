@@ -7,8 +7,8 @@
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$blue-color-dark};
+  --global-hover-color: #{$blue-color-dark};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
@@ -16,7 +16,7 @@
   --global-divider-color: rgba(0,0,0,.4);
   --global-divider-color-shallow: rgba(0,0,0,.1);
   --global-card-bg-color: #{$white-color};
-  --global-venue-color: #{$cyan-color};
+  --global-venue-color: #{$cyan-color-dark};
 
 
   .fa-sun {
@@ -43,7 +43,7 @@ html[data-theme='dark'] {
   --global-divider-color: #e6e6e6;
   --global-divider-color-shallow: #515151;
   --global-card-bg-color: #{$grey-900};
-  --global-venue-color: #{$light-purple-color};
+  --global-venue-color: #{$green-color-bright};
 
   .fa-sun {
     padding-left: 10px;

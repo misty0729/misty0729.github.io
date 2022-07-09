@@ -3,23 +3,12 @@
  ******************************************************************************/
 
 // Typography
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-display: swap;
-  src: url(/assets/fonts/Nunito-normal.woff2) format('woff2');
-}
 
-@font-face {
-  font-family: 'Nunito';
-  font-style: italic;
-  font-display: swap;
-  src: url(/assets/fonts/Nunito-italic.woff2) format('woff2');
-}
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
-  font-family: 'Nunito';
+  font-family: 'TT Norms Pro', 'Nunito';
+  font-weight: 400;
 }
 
 hr {
@@ -496,6 +485,9 @@ footer.sticky-bottom {
     content: "[" counter(paper-counter) "]";
     counter-increment: paper-counter -1;
   }
+  .periodical {
+    font-size: 90%;
+  }
   ol.bibliography {
     list-style: none;
     padding: 0;
@@ -513,6 +505,7 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
       .author {
+        font-size: 90%;
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
