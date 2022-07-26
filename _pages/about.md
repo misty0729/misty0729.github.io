@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Master Student at Tsinghua University<br><a href="/_data/cv.pdf">Curriculum Vitae</a>
+subtitle: Master Student at Tsinghua University
 
 profile:
   align: right
