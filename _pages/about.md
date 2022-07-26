@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Master Student at Tsinghua University
+subtitle: Master Student at Tsinghua University<br><a href="/_data/cv.pdf">Curriculum Vitae</a>
 
 profile:
   align: right
@@ -24,5 +24,3 @@ Hi! I am a second year master student in Computer Science and Technology at [Tsi
 My research interests include Multi-modal Fusion and Computer Vision.
 
 Email: qianz9729 [at] gmail [dot] com
-
-CV: [Curriculum Vitae](/_data/cv.pdf)
