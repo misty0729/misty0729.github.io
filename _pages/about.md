@@ -19,7 +19,7 @@ social: false  # includes social icons at the bottom of the page
 others: true
 ---
 
-Hi! I am a second year master student in Computer Science and Technology at [Tsinghua University](https://www.tsinghua.edu.cn/en/), where I obtained a bachelor’s degree in Computer Science and Technology in 2020. I conduct research under the supervision of Professor [Wenwu Zhu](https://scholar.google.com/citations?user=7t2jzpgAAAAJ&hl=en) and Professor [Xin Wang](http://mn.cs.tsinghua.edu.cn/xinwang/).
+Hi! I am a third year master student in Computer Science and Technology at [Tsinghua University](https://www.tsinghua.edu.cn/en/), where I obtained a bachelor’s degree in Computer Science and Technology in 2020. I conduct research under the supervision of Professor [Wenwu Zhu](https://scholar.google.com/citations?user=7t2jzpgAAAAJ&hl=en) and Professor [Xin Wang](http://mn.cs.tsinghua.edu.cn/xinwang/).
 
 My research interests include Multi-modal Fusion and Computer Vision.
 
