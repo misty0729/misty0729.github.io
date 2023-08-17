@@ -33,7 +33,7 @@
           <div class="author">
           {%- for author in entry.author_array -%}
             {%- assign author_is_self = false -%}
-            {%- if author.last == site.scholar.last_name%}
+            {%- if site.scholar.last_name contains author.last -%}
               {%- if site.scholar.first_name contains author.first -%}
                 {%- assign author_is_self = true -%}
               {%- endif -%}
@@ -122,14 +122,22 @@
               <a href="{{ entry.code }}">[Code]</a>
             {%- endif %}
 
+            <award>
+              {%- if entry.award %}
+                {{ entry.award }}.
+              {%- endif %}
+            </award>
           </div>
 
           {%- if entry.media %}
             <div class="media">
               Media:&nbsp;
               {%- if entry.sa %}
-                <a href="{{ entry.sa }}">Scientific American</a>
+                <a href="{{ entry.sa }}">[Scientific American]</a>
               {%- endif %}
+              {%- if entry.maiei %}
+              <a href="{{ entry.maiei }}">[Montreal AI Ethics Institute]</a>
+            {%- endif %}
             </div>
           {%- endif %}
         {%- endif %}

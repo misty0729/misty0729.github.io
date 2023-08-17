@@ -11,6 +11,14 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color-shallow);
 }
@@ -315,6 +323,14 @@ footer.sticky-bottom {
   }
 }
 
+// Repositories
+
+@media (min-width: 768px) {
+  .repo {
+    max-width: 50%;
+  }
+}
+
 // Blog
 
 .header-bar {
@@ -469,6 +485,9 @@ footer.sticky-bottom {
       font-size: 1.5rem;
     }
   }
+  .topic {
+    font-size: larger;
+  }
   h2.year {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
@@ -481,12 +500,20 @@ footer.sticky-bottom {
     color: var(--global-venue-color);
     font-weight: bolder;
   }
+  award {
+    color: var(--global-award-color);
+    font-weight: bolder;
+  }
   .count::before {
     content: "[" counter(paper-counter) "]";
     counter-increment: paper-counter -1;
   }
   .periodical {
     font-size: 90%;
+  }
+  .media {
+    font-style: italic;
+    color: var(--global-media-color);
   }
   ol.bibliography {
     list-style: none;
@@ -516,6 +543,15 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+        }
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+          &:hover {
+              color: var(--global-text-color);
+              border-bottom: 1px dashed var(--global-text-color);
+          }
         }
       }
       .links {
